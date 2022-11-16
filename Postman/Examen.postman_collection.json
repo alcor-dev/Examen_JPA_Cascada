@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "3ee355c3-ee14-43ce-876c-23df56037343",
+		"name": "Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24031638"
+	},
+	"item": [
+		{
+			"name": "Add Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Antonio Banderas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Line To Bill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"importeFra\" : 900.0 ,\r\n    \"cliente\" : {\r\n        \"id_Cliente\" : 1\r\n    },\r\n    \"lineasFra\" : [\r\n        {\r\n           \"proNomb\" : \"Patitos de Goma\",\r\n            \"cantidad\" : 500.0 ,\r\n            \"precio\" : 25\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/factura/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factura",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
